@@ -1,0 +1,37 @@
+{
+  "policies": [
+    {
+      "handler": {
+        "export": "default",
+        "module": "$import(./modules/type-enforce)",
+        "options": {
+          "type": "foo"
+        }
+      },
+      "name": "require-type-foo",
+      "policyType": "custom-code-inbound"
+    },
+    {
+      "handler": {
+        "export": "default",
+        "module": "$import(./modules/type-enforce)",
+        "options": {
+          "type": "bar"
+        }
+      },
+      "name": "require-type-bar",
+      "policyType": "custom-code-inbound"
+    },
+    {
+      "handler": {
+        "export": "ApiKeyInboundPolicy",
+        "module": "$import(@zuplo/runtime)",
+        "options": {
+          "allowUnauthenticatedRequests": false
+        }
+      },
+      "name": "api-key-inbound",
+      "policyType": "api-key-inbound"
+    }
+  ]
+}
