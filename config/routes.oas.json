@@ -24,7 +24,8 @@
           "policies": {
             "inbound": [
               "api-key-inbound",
-              "require-type-foo"
+              "require-type-foo",
+              "forward-account"
             ]
           }
         },
